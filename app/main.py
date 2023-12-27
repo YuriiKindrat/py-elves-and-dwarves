@@ -1,15 +1,10 @@
-from abc import ABC, abstractmethod
+def calculate_team_total_rating(team: list) -> int:
+    return sum([player.get_rating() for player in team])
 
 
-class Player(ABC):
+def elves_concert(elves: list) -> None:
+    [player.play_elf_song() for player in elves]
 
-    def __init__(self, nickname):
-        self.nickname = nickname
 
-    @abstractmethod
-    def get_rating(self):
-        pass
-
-    @abstractmethod
-    def player_info(self):
-        pass
+def feast_of_the_dwarves(dwarves: list) -> None:
+    [player.eat_favourite_dish() for player in dwarves]
